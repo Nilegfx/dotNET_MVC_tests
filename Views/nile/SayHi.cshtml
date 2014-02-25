@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "SayHi";
+}
+
+
+<hr />
+
+<hr />
+
+
+
+
+
+    <h2>@Nile.nullableValue(2) <small class="assert"> number 2</small></h2>
+    <h2>@Nile.nullableValue(-10) <small class="assert"> number -10</small></h2>
+    <h2>@Nile.nullableValue(0) <small class="assert"> number 0</small></h2>
+    <h2>@Nile.nullableValue(false) <small class="assert">bool false</small></h2>
+    <h2>@Nile.nullableValue(true) <small class="assert"> bool true</small></h2>
+    <h2>@Nile.nullableValue("") <small class="assert">empty string</small></h2>
+    <h2>@Nile.nullableValue("string here") <small class="assert"> string </small></h2>
+    <h2>@Nile.nullableValue(null) <small class="assert"> null </small></h2>
+
+@*@foreach (string item in ViewBag.theParams)
+{
+
+    <h3>@item</h3>
+
+    if (ViewBag.theParams[item] !="")
+    { 
+        <p>@ViewBag.theParams[item]</p>
+    }
+    
+    
+
+
+}*@
+

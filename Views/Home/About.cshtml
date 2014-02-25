@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "About";
+    ViewBag.ayoub = "ahmed ayoub";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+    <h3>@ViewBag.ayoub</h3>
+
+</hgroup>
+
+<article>
+    <p>
+        Use this area to provide additional information.
+    </p>
+
+    <p>
+        Use this area to provide additional information.
+    </p>
+
+    <p>
+        Use this area to provide additional information.
+    </p>
+</article>
+
+<aside>
+    <h3>Aside Title</h3>
+    <p>
+        Use this area to provide additional information.
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index")</li>
+        <li>@Html.ActionLink("Home", "Index","nile")</li>
+        <li>@Html.ActionLink("Home", "sayHi","nile")</li>
+        <li>@Html.ActionLink("About", "About")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact")</li>
+        <li>@Html.ActionLink("Contact", "Contact", new { ahmed = "ayoub"})</li>
+    </ul>
+</aside>

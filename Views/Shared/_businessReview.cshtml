@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.title = "ayoub";
+    @Model.item.Name
+    @Model.item.Country
+    @Model.item.Rating
+}
+<div class="box"> 
+    <div class="box-header">
+        <div class="box-title">@Model.Name</div>
+    </div>
+    <div class="box-content">
+        <p>@Model.Country</p>
+        <p>@Model.City</p>
+    </div>
+    <div class="box-footer"><p>@Model.Rating</p></div>
+</div>

@@ -1,0 +1,56 @@
+﻿@using System.Web.Mvc;
+
+@functions
+{
+    public static MvcHtmlString nullableValue(string str)
+      {
+          if (str != null && !str.IsEmpty())
+          {
+              return new MvcHtmlString( str );
+          }
+          return new MvcHtmlString("null or empty string!");
+      }
+
+    public static MvcHtmlString nullableValue(bool b)
+    {
+        return new MvcHtmlString(b.ToString());
+    }
+
+
+    public static int nullableValue(int integer)
+    {
+        
+            return integer;
+        
+    }  
+}
+
+
+
+@*@helper nullableValue(string str){
+    
+    
+    
+    if (str == "" || str == null){
+       <span>The provided string is empty or null</span>
+    }else
+    {
+        @str
+    }
+
+}
+
+@helper nullableValue(int integer){
+    
+    
+    
+    if (integer == null)
+    {
+       <span>The provided string is empty or null</span>
+    }else
+    {
+        @integer
+    }
+
+}
+*@
