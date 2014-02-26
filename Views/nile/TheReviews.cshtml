@@ -11,9 +11,7 @@
 
 
 @foreach (var item in @Model) {
-    
-    
-    
-    @Html.Partial("_businessReview", new { item  = item })
+    @Html.Partial("_businessReview", (MvcApplication1.Models.Review)item,new ViewDataDictionary(ViewData) {{"Parent", "True"}});
+    @Html.Partial("_businessReview", (MvcApplication1.Models.Review)item, new ViewDataDictionary(ViewData) { { "Parent", "False" }});
 
 }

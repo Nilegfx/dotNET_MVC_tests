@@ -1,16 +1,23 @@
-﻿@{
-    ViewBag.title = "ayoub";
-    @Model.item.Name
-    @Model.item.Country
-    @Model.item.Rating
+﻿@model MvcApplication1.Models.Review
+
+@{
+    ViewBag.title = "this";
+    ViewBag.className = "";
+    if(ViewBag.Parent == "True")
+    {
+        ViewBag.className = " parent";
+    }
 }
-<div class="box"> 
+
+<div class="box@(ViewBag.className)">
     <div class="box-header">
-        <div class="box-title">@Model.Name</div>
+        <h2 class="box-title">@Model.Name</h2>
     </div>
     <div class="box-content">
+        <p>@Model.Id</p>
         <p>@Model.Country</p>
         <p>@Model.City</p>
+        <p>@Model.Rating</p>
     </div>
-    <div class="box-footer"><p>@Model.Rating</p></div>
+    <div class="box-footer"></div>
 </div>
