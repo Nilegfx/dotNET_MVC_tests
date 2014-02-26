@@ -1,6 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "TheReviews";
+    int indexx = 1;
 }
 
 <h2>@ViewBag.Title</h2>
@@ -11,7 +12,12 @@
 
 
 @foreach (var item in @Model) {
-    @Html.Partial("_businessReview", (MvcApplication1.Models.Review)item,new ViewDataDictionary(ViewData) {{"Parent", "True"}});
-    @Html.Partial("_businessReview", (MvcApplication1.Models.Review)item, new ViewDataDictionary(ViewData) { { "Parent", "False" }});
+    if((indexx % 3) == 0){
+        @Html.Partial("_businessReview", (MvcApplication1.Models.Review)item,new ViewDataDictionary(ViewData) {{"Parent", "True"}});
+    }else
+    {
+        @Html.Partial("_businessReview", item as MvcApplication1.Models.Review, new ViewDataDictionary(ViewData) { { "Parent", "False" } });
+    }
 
+    indexx++;
 }

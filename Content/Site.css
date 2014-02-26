@@ -762,3 +762,11 @@ tr.pager td {
     color:red;
     font-style:italic;
 }
+
+.box.parent {
+    color:#e80c4d;
+}
+
+.box.parent h2{
+    color:#e80c4d;
+}
